@@ -1,0 +1,61 @@
+
+.user-main-container {
+  position: relative;
+  padding-top: 50px;
+  height: auto;
+  .hero-image {
+    width: 100%;
+    height: 250px;
+    background: url("https://gallery.1x.com/images/cover/0caf1a98c3703db3bb53366297946dae.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .user-detail {
+    position: relative;
+    margin: 0 auto;
+    margin-top: -80px;
+    .coveroverlay {
+      display: flex;
+      padding-left: 25px;
+      .user-avatar {
+        width: 170px;
+        height: 170px;
+        margin-right: 30px;
+        > img {
+          width: 100%;
+          height: 100%;
+          border-radius: 5px 5px 0 0;
+        }
+      }
+      .user-name {
+        font-size: 30px;
+        color: #ffffff;
+        padding-top: 130px;
+      }
+    }
+
+    .tabs {
+      display: flex;
+      margin: 40px 0px 0px 0px;
+      padding-left: 25px;
+      .tab {
+        padding: 8px;
+        width: 140px;
+        font-size: 14px;
+        position: relative;
+        background: linear-gradient(to bottom, rgba(34, 34, 34, 1) 0%, rgba(17, 17, 17, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#222222', endColorstr='#111111', GradientType=0);
+        border-top: 2px solid #222;
+        border-bottom: 2px solid #222;
+        border-right: 2px solid #222;
+        text-align: center;
+        cursor: pointer;
+        color: #aaa;
+        &.router-link-active{
+          background: linear-gradient(to bottom,rgba(37,37,37,1) 0%,rgba(34,34,34,1) 100%);
+        }
+      }
+    }
+
+  }
+}

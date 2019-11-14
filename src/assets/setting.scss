@@ -1,0 +1,68 @@
+.setting-container {
+  width: 100%;
+  min-height: 1000px;
+  padding-top: 30px;
+  background-color: #ededef;
+  .form-area {
+    width: 1000px;
+    min-height: 500px;
+    background-color: #fff;
+    margin: 0 auto;
+    border-top: 1px solid #D4D4D5;
+    border-radius: 5px;
+    box-shadow: 0 1px 10px 2px rgba(0, 0, 0, .08);
+    .form-title {
+      font-size: 32px;
+      font-weight: normal;
+      padding: 26px 30px 16px;
+      border-bottom: 1px solid #ebebeb;
+    }
+    .form-items {
+      position: relative;
+      font-size: 16px;
+      .form-item {
+        min-height: 141px;
+        background-color: #f7f7f7;
+        display: flex;
+        > label {
+          padding: 20px 30px;
+          flex: 0 0 120px;
+        }
+        .form-item-content{
+          padding: 20px 30px;
+          flex: 1;
+          background: #ffffff;
+          border-bottom: 1px solid #ebebeb;
+          .image{
+            height: 100px;
+            width: 100px;
+            overflow: hidden;
+            border-radius: 50%;
+            >img{
+              width: 100%
+            }
+          }
+          .txt{
+            font-size: $--font-size-extra-small;
+            margin-bottom: 17px;
+            color: #888;
+          }
+        }
+      }
+      .submit-item{
+        width: 100%;
+        padding: 26px 30px 16px;
+        border-bottom: 1px solid #ebebeb;
+        .buttons{
+          position: relative;
+          height: 60px;
+          .el-button{
+            position: absolute;
+            right: 0;
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+}

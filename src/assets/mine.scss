@@ -1,0 +1,98 @@
+@mixin dark-scrollbar {
+  &::-webkit-scrollbar {/*滚动条整体样式*/
+    width: 12px;     /*高宽分别对应横竖滚动条的尺寸*/
+    height: 12px;
+  }
+  &::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 5px;
+//    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    background-color: rgba(100,100,100,0.5);
+  }
+  &::-webkit-scrollbar-track {/*滚动条里面轨道*/
+//    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+//    border-radius: 0;
+    background-color: rgba(0,0,0,0.2);
+  }
+}
+
+html {
+  @include dark-scrollbar();
+  overflow-y:scroll; // 保证在路由切换的时候屏幕布局不会跳来跳去
+}
+body{
+  background: $--background-color-light;
+}
+#app{
+  padding-top:60px;
+  min-width: 1000px;
+  .mainContainer{
+    height:auto;
+    margin:0 auto;
+  }
+}
+
+.width-control{
+  min-width: 1000px;
+  max-width: 1580px;
+}
+
+.el-textarea{
+  .el-textarea__inner{
+    background-color: $--background-color-lighter;
+    padding: 5px 10px;
+  }
+}
+
+.el-dropdown-menu{
+  @include dark-scrollbar();
+  background-color: $--background-color-light;
+}
+
+.el-dropdown-link{
+  cursor: pointer;
+}
+
+.channelList{
+  float:right;
+  display:flex;
+  > a{
+    margin: 0 10px;
+    font-size: $--font-size-large;
+    padding:7px 5px;
+
+    color: $--color-text-secondary;
+    border-bottom: 1px solid $--color-text-secondary;
+
+    &.router-link-active{
+      color: $--color-text-primary;
+      border-bottom: 1px solid $--color-text-primary;
+    }
+  }
+}
+.channelArea {
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 2;
+  top: 60px;
+  left: 50%;
+  width: 100%;
+  height: 60px;
+  background-color: $--background-color-light;
+  padding-top: 8px;
+  transform: translate3d(-50%, 0, 0);
+  .tags {
+    float: left;
+    min-width: 80px;
+    .el-dropdown {
+      width: 100%;
+    }
+  }
+}
+
+.user-namecard{
+  .avatar {
+    width:100px;
+    height:100px;
+  }
+}
+
